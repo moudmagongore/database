@@ -1,0 +1,58 @@
+npm :  le package manager
+
+browser-sync start --server --files="*.*"    Pour lancer le serveur.
+
+emmet : C'est un outil qui peut ameliorer notre productivité de developpeur web des raccourci
+  
+jshint: pour avoir des sanctions dans le mauvais code javaScript
+
+Raccourci : div#mon_id.panel>ul>li*3
+
+browser-sync : qui permet de rafrechir la page en meme temps qu'on code.
+
+Pour installer le serveur : npm install -g browser-sync
+
+Pour lancer le serveur : browser-sync start --server --files="*.*"
+
+En JS les variables sont typées faiblement : c a d c'est pas au moment de la declaration qu'on peut indiquer le type c'est au moment de l'initialisation.
+
+Les typages forts c'est au moment de la declaration qu'on indique le type comme c#.
+
+for in pour declarer une variable qui vas recuperer les indices du tableau.
+
+for of pour declarer une variable qui vas recuperer le contenu du tableau.
+
+C'est une fuction qui delimite la porté d'une variable en js
+
+hoisting : Fait remonter les declarations au debut du code.
+
+istanceof : permet de tester le constructeur de l'objet.
+
+json: jS object notation: format des données renvoyées par le serveur.
+
+en js ce sont les functions qui delimite la porté des variable
+
+Function : permettent de factoriser du code pour permettre une reutilisation.
+
+Function anonyme : Est une function qui na pas de nom et qui s'auto appel.
+
+Function immediate : Permettent de delimiter la porté des variables tout en éxecutant du code.
+
+Function interne : Permettent de declarer des functions privées.
+
+"use strict" : impose une rigueur de codage.
+
+hoisting : permet de remonter une variable.
+
+Les closure : nous permet d'eviter la redeclaration des variables et optimiser la memoire. 
+
+https://jsfiddle.net
+
+en js On simule les proprieté public avec this.nom = n;  et les private avec var nom = n;
+
+Une promesse : est un objet permet de synchroniser elegament des traitements asynchrone.
+
+Le pattern module :  permet d'encapsuler du code comme un package ou namespace.
+
+La programmation modulaire : c'est le fait d'organiser son code en module a savoir en bloque reuitilisable dans different projet.
+

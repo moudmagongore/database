@@ -1,0 +1,36 @@
+body
+{
+	font-family: verdana, calibri, sans-serif;
+	margin: 0px; /*  on fait cela pour eviter que le navigateur ajoute des marges automatique*/
+	padding: 0px;
+}
+nav ul 
+{
+	margin: 0px;
+	padding: 0px;
+}
+nav li
+{
+	list-style: none; /*Pour enlever les push*/
+}
+nav > ul> li
+{
+	display: inline-block;
+	vertical-align: top;
+}
+nav   ul  li   ul
+{
+	position: relative;
+	top: -999px;
+	/*transition: .2s all;*/
+}
+nav > ul> li:hover .submenu
+{
+	top: 0px; 
+
+}
+
+
+
+
+

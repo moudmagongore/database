@@ -1,0 +1,43 @@
+body{
+	padding-top: 60px;
+  /*background-color: #2d515c;*/
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.wrapper{
+           width: 680px;
+          /* border: 1px solid red;*/
+           margin: 0 auto; /*pour centrer*/
+           padding-top: 3em; /*pour avoir un spacement en haut*/
+           text-align: center; /* Pour centrer notre text*/
+           max-width: 70%; /*pour le design.comme largeur maximal tu prend 70% de la largeur*/
+
+        }
+
+  input[type="text"]{
+        width: 100%;
+        padding: 1em 0.5em;
+        border-radius: 20px; /*pour arrondir les bord*/
+         
+  }
+
+  .lien{
+  	text-align: left;
+    color: #006621;
+  }
+  h1{
+  	font-size: 1.5vw;
+  }
+  .titre{
+  	text-align:  left;	
+  }
+ /* .motCle{
+  	text-align:  left;
+  }*/
+  .fichier{
+  	text-align:  left;
+     color: #006621;
+  }

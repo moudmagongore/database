@@ -1,0 +1,16 @@
+le nom : git config --global user.name "Mahmoud Diallo"
+verifier : git config --global user.name
+
+l'email : git config --global user.email "moudmagongore@gmail.com"
+verifier :git config --global user.email
+
+git init : Pour initialiser un projet en tant que depot git
+
+git status : pour connaitre le status actuel des depots.
+
+git add le nom du fichier: pour tracker un fichier ou commiter.
+git add. ou git add -A : pour commiter tout les fichier.
+
+git commit -m "intitial commit" : prend tout et en fait en backup.
+
+git log : Pour voir tout les commit qu'on as fait.
