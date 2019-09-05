@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function(){
 			divResultats = document.querySelector("#resultats");
 			divResultats.innerHTML = "";
 
+
+
+			
+
+
 			if(data.topics.length){
 
 				data.topics.map(topic => {
@@ -24,13 +29,26 @@ document.addEventListener('DOMContentLoaded', function(){
 					const titre = document.createElement("div");
 					titre.className = "titre";
 
+
 					if(topic.contenu_lien) {
 						titre.innerHTML = `<h1><a href=${topic.contenu_lien} target="_blank">${topic.titre}</a> </h1>`;
 					}
-					else {
+					else if(topic.contenu_fichier) {
 						titre.innerHTML = `<h1><a href=/contenu_fichier/${topic.contenu_fichier} target="_blank">${topic.titre}</a></h1>`;
 					}
+					else if(topic.description) {
+						topicDiv.innerHTML = `
+							<div class="desc">
+								<h1>
+									${topic.titre}
+								</h1>
+							</div>
+						`;
+					}
 					topicDiv.appendChild(titre);
+
+
+
 
 					if(topic.contenu_lien) {
 						topicDiv.innerHTML += `
@@ -40,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
 								</h1>
 							</div>`;
 					}
-					else {
+					else if(topic.contenu_fichier) {
 						topicDiv.innerHTML += `
 							<div class="fichier">
 								<h1>
@@ -48,7 +66,16 @@ document.addEventListener('DOMContentLoaded', function(){
 								</h1>
 							</div>
 						`;
-					}					
+					}	
+					else if(topic.description) {
+						topicDiv.innerHTML += `
+							<div class="description">
+								<h1>
+									${topic.description}
+								</h1>
+							</div>
+						`;
+					}						
 
 					divResultats.appendChild(topicDiv);
 				});

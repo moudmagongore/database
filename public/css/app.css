@@ -27,6 +27,7 @@ body{
   .lien{
   	text-align: left;
     color: #006621;
+    margin-top: -10px;
   }
   h1{
   	font-size: 1.5vw;
@@ -40,4 +41,22 @@ body{
   .fichier{
   	text-align:  left;
      color: #006621;
+     margin-top: -10px;
+  }
+
+
+  .desc{
+    text-align:  left;
+     color: #236595;
+  }
+
+  .description{
+    text-align:  left;
+    margin-top: -10px;
+    font-size: -1em;
+
+      display: inline-block;
+      padding: 15px;
+      border: 2px solid black;
+
   }

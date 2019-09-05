@@ -16,6 +16,7 @@ class CreateTopicsTable extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('titre');
+            $table->text('description')->nullable();
             $table->unsignedBigInteger('type_id');
             $table->string('contenu_lien')->nullable();
             $table->text('contenu_fichier')->nullable();

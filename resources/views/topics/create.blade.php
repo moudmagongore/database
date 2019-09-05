@@ -51,6 +51,20 @@
 					{!! $errors->first('contenu_fichier', '<p class="error">:message</p>')!!}
 				</div>
 
+
+
+				<div class="form-group" id="descriptions" style="display: none">
+						<label for="message" class="control-label {{-- sr-only --}}">
+							Description
+						</label>
+						<textarea class="form-control {{$errors->has('description') ? 'has-error' : '' }}" rows="10" cols="10" name="description" id="description">{{old('description')}}</textarea>
+
+						 {!!$errors->first('description', '<p class="error">:message</p>')!!}
+					</div>
+
+
+
+
 				<div class="form-group {{$errors->has('mot_cle') ? 'has-error' : '' }}">
 					<label for="mot_cle" class="control-label">Mot cle</label>
 
@@ -77,17 +91,25 @@
 		const type = document.querySelector('#type');
 		const lien = document.querySelector('#contenu_liens');
 		const fichier = document.querySelector('#contenu_fichiers');
+		const description = document.querySelector('#descriptions')
 
 		type.addEventListener('change', event => {
 			const selected = Number(type.value);
 			
 			if(selected === 1) { // Lien: selected
 				fichier.style.display = "none";
+				description.style.display = "none";
 				lien.style.removeProperty('display');
 			}
 			else if(selected === 2) { // Fichier: selected
 				lien.style.display = "none";
+				description.style.display = "none";
 				fichier.style.removeProperty('display');
+			}
+			else if(selected === 3) { // Fichier: selected
+				lien.style.display = "none";
+				fichier.style.display = "none";
+				description.style.removeProperty('display');
 			}
 		})
 	</script>

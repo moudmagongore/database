@@ -1,0 +1,163 @@
+TAYLOR HOTWEL
+
+Un framework web: est un ensemble d'outil ,librairy qui va nous faciliter la création d'application web.
+
+composer : Est un gestionnaire de dependance.
+
+créer un projet avec composer : composer create-project --prefer-dist laravel/laravel demo         laravel new demo
+
+Pour l'erreur could not driver : php -i | find /i "Configuration File"
+;extension = php_pdo_mysql.dll
+
+pour géner une nouvelle clé au niveau de .env: php artisan key:generate
+
+API:application programming interface: Ils nous permet d'interagir avec l'application
+
+Blade : moteur de template par defaut au niveau de laravel , il nous permet d'écrire au niveau du vue du code lisible.
+
+Pour changer le port de lancement de l'application : php artisan serve --port 3000
+
+@{{ }} Celà veut dire n'interprete pas ce code.
+
+{!! !!} Celà veut dire interprete moi ce code et n'echappe pas les caracteres.
+
+Methode static est appelé sans pour autant créer un objet de cette classe.
+
+Eloquant : est l'ORM (Object Relationnel Mapper) de laravel.
+
+Variable d'environnement nous permet de stocker des valeurs qui vont differer de machine en machine.
+
+Les collections sont des tableaux mais beaucoup avancé.
+
+__call : Lorsqu'on tante d'appeler une methode qui n'existe pas, __call elle recupere la methode et les parametres en tableau 
+
+Modele: Ils nous permet de gèrer les données , dialoguer avec la bd
+View: Ils nous permet de gèrer tous qui serras afficher pour l'utisateur
+Controlleur: Ils nous permet de gèrer la logique de notre applications il permet au 2 autre model de dialoguer
+
+En laravel les modeles sont des timestamped cela veut dire : c'est a quelle moment l'objet a été créer ou modifier.
+
+Les migrations sont des systèmes de controle de version de  la BD exemple : Git
+
+Artisan : c'est l'interface en ligne de commande de laravel.
+
+php artisan make:migration create_posts_table  pour créer une nouvelle migration.
+
+php artisan migrate pour executer une migration.
+
+php artisan migrate:rollback pour annuler ou supprimer les migrations.
+
+php artisan migrate:reset pour supprimer toutes les migrations y compris la table. ou refresh
+
+
+php artisan storage:link   Il permet de faire un lien entre un dossier public storage vers storage app public
+
+NB: si on souhaitent ajouter un champs on créent une nouvelle migration.
+
+php artisan make:model Event   pour génerer le model Event le nom du model au singulier.
+
+php artisan make:model Event -m   en meme temps il crée le model et la migration.
+
+php artisan make:controller UrlsController  Pour créer un controller.
+
+php artisan app:name TDN     pour changer le namespace racine
+
+composer dump-autoload -o  ils nous permet d'autoloader un fichier.
+
+TP1 raccourcisseur d'url
+
+	//POUR RECUPERER CE QUE L'USER A SAISIE 
+
+		//AVEC LES FONCTIONS HELPERS
+		/*dd($_POST['url']);*/
+		/*dd(request('url'));*/
+		/*dd(request()->get('url'));*/
+		/*dd(request()->input('url'));*/
+
+		//OUBIEN LES FAçADES
+		/*dd(Request::input('url'));*/
+
+get nous permet d'acceder a une page ou a une information.
+post lorqu'on veut poster quelque chose ou créer une ressource.
+
+Recursivité : est une fonction qui s'appelle elle même.
+
+self : fait reference a la classe ou on se trouve.
+static :  fait reference a la classe qui a appeler la methode en question.
+
+old : pour avoir la valeur qui a été precedement entrer
+
+pour la langue des erreurs on utilisent Les messages constomiser ou les fichiers de langues.
+
+Les providers : sont des moins qui ns permet de faire quelque chose a l'initialisation de l'application
+
+instance of : pour verifier le type d'exception
+
+firstOrFail() : Pour lever une Exception de type ModelNotFoundException
+
+firstOrNew() : Il nous retourne une instance qui n'est pas persisté.
+firstOrCreate() : Il crée une instace et persisté a la BD.
+
+invoke() : Si le controlleur a une seule action à gérer 
+
+middleware se trouve entre la requete et la reponse.
+
+REST: Representational state transfer.
+
+php artisan route:list ->  pour voir la liste des routes.
+
+La difference entre put et patch
+put : Lorsqu'on veut modifier entièrement une entrée dans la BD.
+patch : Lorsqu'on veut modifier une partie de l'entré.
+
+C => Create, Créer -> Requete de type POST
+R => Read, Lire -> GET
+U => Update, Modifier -> PUT|PATCH
+D => Delete, Supprimer -> DELETE
+
+Clé etrangere : https://apical.xyz/fiches/creation_de_la_base_de_donnees_et_de_ses_tables/Les_fichiers_de_migration_pour_creer_les_tables
+
+
+Restaurer toutes les migrations
+
+     php artisan migrate:reset 
+
+Annule toutes les migrations et les réexécute
+
+    php artisan migrate:refresh php artisan migrate:refresh --seed 
+
+Pour mettre le champs a saisir en rouge erreur
+
+    {{$errors->has('nom') ? 'has-error' : '' }}
+
+Pour créer une forme request :   php artisan make:request createEventFormRequest
+
+
+preventDefault()  :Ne fais ce que tu as faire par defaut.
+
+$guarded c'est pour nous dire quelle sont les champs a ne pas fillé  contrairement a $fil
+
+middleware  :pour dire ce controller ne pas accesible si l'user n'est pas connecté. il fournissent un mecanisme pratique pour filtrer les requetes http entrant au nivo de l'app
+
+attempt : Pour tester une connexion.
+
+Recherche #4 Système d'annonces avec Laravel 5.7 : Recherche avec AXIOS
+
+m1s@2018GN
+wireless_16.1.3_e64
+
+paginate ou simplePaginate  : pour la pagination au niveau des tableaux  en utilisan la fonction link().
+
+php artisan vendor:publish --tag=laravel-pagination    Pour modifier la pagination.
+
+Les traits : nous permet de partager des methodes entre plusieurs class
+
+guard : comment authentifier les users
+
+Provider: comment recuperer les informations qui ont été sauvegardé
+
+@guest : pour savoir si est un visiteur
+Auth : pour savoir l'user connecté
+
+merge : pour rajouter quelque chose a la requete
+

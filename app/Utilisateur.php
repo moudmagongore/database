@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
+use App\Topic;
 
 class Utilisateur extends Model implements Authenticatable
 {
@@ -16,7 +17,7 @@ class Utilisateur extends Model implements Authenticatable
 
     public function topics()
     {
-        return $this->hasMany('App\Topic');
+        return $this->hasMany(Topic::class);
     }
 
 

@@ -48,7 +48,7 @@ class TopicsController extends Controller
 
             /* dd($user->id);*/
 
-             Topic::create(['titre' => $request->titre, 'type_id' => $request->type, 'contenu_lien' => $request->contenu_lien, 'contenu_fichier' =>$fileName,'utilisateur_id' =>$user->id, 'mot_cle' => $request->mot_cle]);
+             Topic::create(['titre' => $request->titre, 'type_id' => $request->type, 'contenu_lien' => $request->contenu_lien, 'contenu_fichier' =>$fileName, 'description' => $request->description, 'utilisateur_id' =>$user->id, 'mot_cle' => $request->mot_cle]);
 
               Flashy('Topic créer avec succès!');
 
